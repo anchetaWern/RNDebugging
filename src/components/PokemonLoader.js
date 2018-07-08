@@ -23,14 +23,13 @@ class PokemonLoader extends Component {
 					<View style={styles.content}>
 						{pokemon && <Card data={pokemon} fetching={fetching} />}
 
-						{!pokemon &&
-							fetching && (
-								<Image
-									source={pokeball}
-									resizeMode={'contain'}
-									style={styles.pokeBall}
-								/>
-							)}
+						{!pokemon && (
+							<Image
+								source={pokeball}
+								resizeMode={'contain'}
+								style={styles.pokeBall}
+							/>
+						)}
 
 						{fetching &&
 							!pokemon && <ActivityIndicator size="large" color="#0000ff" />}
@@ -53,6 +52,8 @@ const styles = {
 		alignItems: 'center',
 	},
 	pokeBall: {
+		width: 120,
+		height: 120,
 		marginTop: 50,
 	},
 	errorText: {

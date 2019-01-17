@@ -25,6 +25,7 @@ git clone https://github.com/anchetaWern/RNDebugging.git
 ```
 cd RNDebugging
 npm install
+react-native eject
 ```
 
 ## Built With
